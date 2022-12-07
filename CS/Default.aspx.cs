@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -23,7 +23,7 @@ public partial class _Default : System.Web.UI.Page
             gridView.Columns["ProdPrice"].Visible = !isExpanded;
         }
     }
-    protected void gridView_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e)
+    protected void gridView_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e)
     {
         string[] param = e.Parameters.Split('|');
         ASPxGridView grid = sender as ASPxGridView;

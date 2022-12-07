@@ -4,7 +4,7 @@ Imports System.Linq
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 Partial Public Class _Default
     Inherits System.Web.UI.Page
@@ -21,7 +21,7 @@ Partial Public Class _Default
             gridView.Columns("ProdPrice").Visible = Not isExpanded
         End If
     End Sub
-    Protected Sub gridView_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs)
+    Protected Sub gridView_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewCustomCallbackEventArgs)
         Dim param() As String = e.Parameters.Split("|"c)
         Dim grid As ASPxGridView = TryCast(sender, ASPxGridView)
 
